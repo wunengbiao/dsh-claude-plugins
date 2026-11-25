@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Claude plugins",
+    "description": "Read installed Claude Code plugins, manage them in Settings, and load their skills, commands, subagents, hooks, and MCP servers.",
+    "detail": "README.md"
+  }
+}

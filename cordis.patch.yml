@@ -1,0 +1,11 @@
+# dsh-claude-plugins bundle layer.
+# Core: discovery, skills, commands, and settings persistence.
+# UI: settings JSON API, after the web server exists.
+# MCP: plugin-owned MCP servers, after the MCP manager exists (pending when absent).
+- insert:
+    - id: claude-plugins
+      name: 'dsh-claude-plugins'
+    - id: claude-plugins-ui
+      name: 'dsh-claude-plugins/ui'
+    - id: claude-plugins-mcp
+      name: 'dsh-claude-plugins/mcp'

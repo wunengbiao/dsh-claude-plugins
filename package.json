@@ -1,0 +1,73 @@
+{
+  "name": "dsh-claude-plugins",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: discover installed Claude Code plugins, load their skills and commands, optionally register their MCP servers, and manage them in Settings.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./ui": "./lib/ui.js",
+    "./mcp": "./lib/mcp-row.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "claude",
+    "claude-code",
+    "plugins",
+    "skills",
+    "commands"
+  ],
+  "author": "wunengbiao",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check index.js && node --check client.js && node --check lib/entry.js && node --check lib/ui.js && node --check lib/shared.js && node --check lib/mcp-row.js && node --check lib/config.js && node --check lib/runtime.js && node --check lib/discovery.js && node --check lib/marketplaces.js && node --check lib/plugin.js && node --check lib/enumerate.js && node --check lib/documents.js && node --check lib/frontmatter.js && node --check lib/mcp.js && node --check lib/command.js && node --check lib/names.js && node --check lib/snapshot.js && node --check lib/settings.js && node --check lib/routes.js && node --check lib/json.js && node --check lib/paths.js && node --check lib/errors.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.1+": "compatible"
+      }
+    }
+  },
+  "icon": "icon.svg",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wunengbiao/dsh-claude-plugins.git"
+  },
+  "homepage": "https://github.com/wunengbiao/dsh-claude-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/wunengbiao/dsh-claude-plugins/issues"
+  }
+}
